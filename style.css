@@ -1,36 +1,87 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #0fff;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f8ff;
+    background: #0f2027;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    overflow-x: hidden;
+}
+
+.background-blur {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+    filter: blur(10px);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #111;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #00f0ff;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #c0eaff;
 }
 
 nav {
-    background-color: #222;
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 nav a {
-    color: #0fff;
-    margin: 0 15px;
+    color: #00ffff;
     text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 section {
     padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #00f0ff;
+    margin-bottom: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
 
 footer {
-    background-color: #111;
     text-align: center;
     padding: 10px;
-    position: relative;
+    font-size: 0.9em;
+    color: #cccccc;
 }
