@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-blur"></div>
+    <div class="background-pattern"></div>
     <div class="content">
         <header>
             <h1>Bakuss Web Services</h1>
@@ -18,12 +18,12 @@
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#testimonials">Témoignages</a>
+            <a href="#order">Commande</a>
             <a href="#contact">Contact</a>
         </nav>
         <section id="about">
             <h2>À propos</h2>
-            <p>Bakuss Web Services est une jeune entreprise ivoirienne spécialisée dans la création de sites web modernes, rapides et accessibles pour les petites entreprises et entrepreneurs. 
-            Notre objectif est de digitaliser les commerces locaux en offrant des solutions abordables et efficaces. Dirigé par Kamagaté Bakary, passionné de technologie et de marketing digital.</p>
+            <p>Bakuss Web Services est une entreprise ivoirienne spécialisée dans la création de sites web modernes, rapides et accessibles pour les petites entreprises et entrepreneurs.</p>
         </section>
         <section id="services">
             <h2>Nos Services</h2>
@@ -44,6 +44,27 @@
             <blockquote>"Le site de mon salon de coiffure est magnifique. Merci Bakary !" - Fatou C.</blockquote>
             <blockquote>"Enfin un site pour mon resto ! Mes clients me trouvent sur Google maintenant." - Franck D.</blockquote>
             <blockquote>"Professionnalisme et rapidité. Je referai appel à ses services." - Nadège T.</blockquote>
+        </section>
+        <section id="order">
+            <h2>Formulaire de commande</h2>
+            <form action="https://formsubmit.co/bakusskamel@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <label>Nom :</label>
+                <input type="text" name="Nom" required><br>
+                <label>Email :</label>
+                <input type="email" name="Email" required><br>
+                <label>Numéro WhatsApp :</label>
+                <input type="text" name="WhatsApp" required><br>
+                <label>Pack choisi :</label>
+                <select name="Pack">
+                    <option value="Starter">Starter - 50 000 FCFA</option>
+                    <option value="Pro">Pro - 75 000 FCFA</option>
+                    <option value="Premium">Premium - 150 000 FCFA</option>
+                </select><br>
+                <label>Détails supplémentaires :</label>
+                <textarea name="Message" rows="4"></textarea><br>
+                <button type="submit">Envoyer la commande</button>
+            </form>
         </section>
         <section id="contact">
             <h2>Contact</h2>

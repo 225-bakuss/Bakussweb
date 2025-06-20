@@ -7,25 +7,29 @@
 body, html {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f0f8ff;
-    background: #0f2027;
-    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    color: #000;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec, #e8f5e9);
     overflow-x: hidden;
 }
 
-.background-blur {
+.background-pattern {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-    filter: blur(10px);
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.2) 0,
+        rgba(255,255,255,0.2) 1px,
+        transparent 1px,
+        transparent 20px
+    );
     z-index: -1;
     top: 0;
     left: 0;
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     min-height: 100vh;
 }
@@ -37,26 +41,27 @@ header {
 
 header h1 {
     font-size: 3em;
-    color: #00f0ff;
+    color: #00838f;
 }
 
 header p {
     font-size: 1.2em;
-    color: #c0eaff;
+    color: #4a148c;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.05);
     padding: 15px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 nav a {
-    color: #00ffff;
+    color: #00796b;
     text-decoration: none;
     font-weight: bold;
 }
@@ -71,7 +76,7 @@ section {
 }
 
 section h2 {
-    color: #00f0ff;
+    color: #004d40;
     margin-bottom: 10px;
 }
 
@@ -79,9 +84,42 @@ ul li {
     margin-bottom: 10px;
 }
 
+blockquote {
+    background-color: #e0f2f1;
+    border-left: 5px solid #00796b;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+form input, form select, form textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004d40;
+}
+
 footer {
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
-    color: #cccccc;
+    color: #666;
 }
