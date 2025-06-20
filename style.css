@@ -7,8 +7,9 @@
 body, html {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #000;
-    background: linear-gradient(135deg, #e0f7fa, #fce4ec, #e8f5e9);
+    color: #333;
+    background: radial-gradient(circle at top left, #e3f2fd, #fce4ec, #f3e5f5, #fffde7);
+    background-size: cover;
     overflow-x: hidden;
 }
 
@@ -16,20 +17,15 @@ body, html {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(255,255,255,0.2) 0,
-        rgba(255,255,255,0.2) 1px,
-        transparent 1px,
-        transparent 20px
-    );
+    background: url('https://www.transparenttextures.com/patterns/graphy.png');
+    opacity: 0.2;
     z-index: -1;
     top: 0;
     left: 0;
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
     min-height: 100vh;
 }
@@ -46,7 +42,7 @@ header h1 {
 
 header p {
     font-size: 1.2em;
-    color: #4a148c;
+    color: #7b1fa2;
 }
 
 nav {
@@ -54,7 +50,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #fff9c4;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -76,7 +72,7 @@ section {
 }
 
 section h2 {
-    color: #004d40;
+    color: #006064;
     margin-bottom: 10px;
 }
 
@@ -85,10 +81,11 @@ ul li {
 }
 
 blockquote {
-    background-color: #e0f2f1;
-    border-left: 5px solid #00796b;
+    background-color: #e0f7fa;
+    border-left: 5px solid #00acc1;
     padding: 10px 15px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 form {
@@ -99,27 +96,29 @@ form {
 
 form input, form select, form textarea {
     margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #b2dfdb;
+    padding: 10px;
+    border: 1px solid #b2ebf2;
     border-radius: 5px;
+    background-color: #ffffff;
 }
 
 form button {
-    padding: 10px;
-    background-color: #00796b;
+    padding: 12px;
+    background-color: #00bfa5;
     color: white;
     border: none;
     border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #004d40;
+    background-color: #00897b;
 }
 
 footer {
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
-    color: #666;
+    color: #444;
 }
