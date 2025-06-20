@@ -1,81 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="icon" href="favicon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakuss Web Services</title>
+    <meta name="description" content="Création de sites web modernes et abordables en Côte d'Ivoire.">
+    <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-pattern"></div>
-    <div class="content">
-        <header>
-            <img src="favicon.png" alt="Bakuss Logo" style="height:80px; margin-bottom:10px;">
-            <h1>Bakuss Web Services</h1>
-            <p>Votre vitrine digitale moderne et accessible</p>
-        </header>
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#testimonials">Témoignages</a>
-            <a href="#order">Commande</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <section id="about">
-            <h2>À propos</h2>
-            <p>Bakuss Web Services est une entreprise ivoirienne spécialisée dans la création de sites web modernes, rapides et accessibles pour les petites entreprises et entrepreneurs.</p>
-        </section>
-        <section id="services">
-            <h2>Nos Services</h2>
-            <ul>
-                <li><strong>Pack Starter :</strong> Site vitrine simple - 50 000 FCFA</li>
-                <li><strong>Pack Pro :</strong> Site + WhatsApp + Formulaire - 75 000 FCFA</li>
-                <li><strong>Pack Premium :</strong> Site + Boutique + Mobile Money - 150 000 FCFA</li>
-            </ul>
-        </section>
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <p>Exemples à venir...</p>
-        </section>
-        <section id="testimonials">
-            <h2>Témoignages</h2>
-            <blockquote>"Bakuss a créé notre site de vente de vêtements en moins d'une semaine, super réactif !" - Aïcha K.</blockquote>
-            <blockquote>"Très bon rapport qualité-prix, je recommande à 100%." - Kouadio J.</blockquote>
-            <blockquote>"Le site de mon salon de coiffure est magnifique. Merci Bakary !" - Fatou C.</blockquote>
-            <blockquote>"Enfin un site pour mon resto ! Mes clients me trouvent sur Google maintenant." - Franck D.</blockquote>
-            <blockquote>"Professionnalisme et rapidité. Je referai appel à ses services." - Nadège T.</blockquote>
-        </section>
-        <section id="order">
-            <h2>Formulaire de commande</h2>
-            <form action="https://formsubmit.co/bakusskamel@gmail.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <label>Nom :</label>
-                <input type="text" name="Nom" required><br>
-                <label>Email :</label>
-                <input type="email" name="Email" required><br>
-                <label>Numéro WhatsApp :</label>
-                <input type="text" name="WhatsApp" required><br>
-                <label>Pack choisi :</label>
-                <select name="Pack">
-                    <option value="Starter">Starter - 50 000 FCFA</option>
-                    <option value="Pro">Pro - 75 000 FCFA</option>
-                    <option value="Premium">Premium - 150 000 FCFA</option>
-                </select><br>
-                <label>Détails supplémentaires :</label>
-                <textarea name="Message" rows="4"></textarea><br>
-                <button type="submit">Envoyer la commande</button>
-            </form>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>WhatsApp : <a href="https://wa.me/225556109225">+225 05 56 10 92 25</a></p>
-            <p>Email : bakusskamel@gmail.com</p>
-        </section>
-        <footer>
-            <p>&copy; 2025 Bakuss Web Services - Tous droits réservés</p>
-        </footer>
-    </div>
+    <header>
+        <img src="logo.png" alt="Logo" style="height:100px;">
+        <h1>Bakuss Web Services</h1>
+        <p>Création de sites web professionnels pour tous</p>
+    </header>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#why">Pourquoi nous choisir</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#order">Commande</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>À propos</h2>
+        <p>Agence de création de site web basée en Côte d'Ivoire.</p>
+    </section>
+    <section id="services">
+        <h2>Nos Services</h2>
+        <ul>
+            <li>Pack Starter : 50 000 FCFA</li>
+            <li>Pack Pro : 75 000 FCFA</li>
+            <li>Pack Premium : 150 000 FCFA</li>
+        </ul>
+    </section>
+    <section id="why">
+        <h2>Pourquoi nous choisir ?</h2>
+        <ul>
+            <li>Prix abordables</li>
+            <li>Support WhatsApp</li>
+            <li>Site rapide et responsive</li>
+        </ul>
+    </section>
+    <section id="testimonials">
+        <h2>Témoignages</h2>
+        <blockquote>"Super service !" - Aïcha</blockquote>
+    </section>
+    <section id="order">
+        <h2>Commander maintenant</h2>
+        <form action="https://formsubmit.co/bakusskamel@gmail.com" method="POST">
+            <input type="text" name="Nom" placeholder="Nom" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <input type="text" name="WhatsApp" placeholder="WhatsApp" required>
+            <select name="Pack">
+                <option>Starter</option>
+                <option>Pro</option>
+                <option>Premium</option>
+            </select>
+            <textarea name="Message" placeholder="Détails"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email : bakusskamel@gmail.com</p>
+        <p>WhatsApp : <a href="https://wa.me/225556109225">+225 05 56 10 92 25</a></p>
+    </section>
+    <a href="https://wa.me/225556109225" class="whatsapp-float">💬</a>
 </body>
 </html>
