@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://225-bakuss.github.io/Bakussweb/sitemap.xml
