@@ -1318,46 +1318,60 @@ body {
     margin-bottom: 40px;
   }
   
-  /* About section mobile fixes */
+  /* About section mobile - specific fixes */
+  .about-section {
+    padding: 32px 12px !important;
+  }
+  
   .about-content {
-    gap: 40px;
+    gap: 32px !important;
   }
   
   .values-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
   
   .value-card {
-    padding: 24px 20px;
+    padding: 20px 16px !important;
+    margin: 0 !important;
   }
   
   .about-highlight {
-    padding: 16px;
-    margin-top: 24px;
+    padding: 16px !important;
+    margin: 20px 0 !important;
   }
   
   .stats-section {
-    margin-top: 40px;
+    margin-top: 32px !important;
   }
   
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    max-width: 100% !important;
+    padding: 0 !important;
   }
   
   .stat-item {
-    padding: 8px;
+    padding: 4px !important;
   }
   
   .description-card {
-    padding: 24px 20px;
+    padding: 20px 16px !important;
+  }
+  
+  .about-description {
+    max-width: 100% !important;
+    margin: 0 !important;
   }
   
   /* Portfolio mobile */
   .portfolio-filters {
     gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 8px;
   }
   
   .filter-btn {
