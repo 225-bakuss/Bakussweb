@@ -1318,6 +1318,43 @@ body {
     margin-bottom: 40px;
   }
   
+  /* About section mobile fixes */
+  .about-content {
+    gap: 40px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .value-card {
+    padding: 24px 20px;
+  }
+  
+  .about-highlight {
+    padding: 16px;
+    margin-top: 24px;
+  }
+  
+  .stats-section {
+    margin-top: 40px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+  }
+  
+  .stat-item {
+    padding: 8px;
+  }
+  
+  .description-card {
+    padding: 24px 20px;
+  }
+  
   /* Portfolio mobile */
   .portfolio-filters {
     gap: 8px;
