@@ -2,91 +2,122 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bakuss Web Services</title>
-  <link rel="icon" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Bakuss Web Services - Création de sites web, logos, cartes de visite et accompagnement digital à Bouaké, Côte d'Ivoire.">
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
 
   <header>
-    <img src="images/logo.png" alt="Bakuss Web Services" class="logo" />
-    <h1>Bienvenue chez Bakuss Web Services</h1>
-    <nav>
-      <a href="#hero">Accueil</a>
-      <a href="#about">À propos</a>
-      <a href="#services">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="#temoignages">Témoignages</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container">
+      <img src="images/logo.png" alt="Logo Bakuss Web Services" class="logo" />
+      <nav>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="hero">
-    <h2>Votre solution digitale à Bouaké</h2>
-    <p>Sites web modernes, logos professionnels, design sur mesure</p>
-    <a href="#contact" class="cta">Demander un devis</a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenue chez Bakuss Web Services</h1>
+      <p>Création de sites web professionnels, modernes et accessibles à tous.</p>
+      <a href="#services" class="cta-button">Voir nos services</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-image.png" alt="Illustration Hero">
+    </div>
   </section>
 
-  <section id="about">
-    <h2>À propos de nous</h2>
-    <p>Je suis Kamagaté Bakary, fondateur de <strong>Bakuss Web Services</strong>, passionné par le digital et engagé à offrir des solutions web accessibles, modernes et efficaces. Notre objectif : aider les entrepreneurs, commerçants et entreprises à se rendre visibles en ligne et à générer plus de clients.</p>
-    <p>🎯 Professionnalisme – 💡 Créativité – 💬 Accompagnement personnalisé</p>
-    <a href="#services" class="btn">Voir nos services</a>
+  <section id="about" class="about">
+    <h2>À propos</h2>
+    <p>
+      Je suis Kamagaté Bakary, fondateur de Bakuss Web Services.  
+      Passionné par le digital et engagé à aider les entrepreneurs ivoiriens à se rendre visibles en ligne,  
+      je propose des services accessibles, modernes et rapides.  
+    </p>
+    <p>
+      Que vous soyez commerçant, artisan, ou entreprise en pleine croissance,  
+      notre objectif est de vous livrer un site professionnel, adapté à vos besoins,  
+      tout en assurant un accompagnement humain et sérieux.
+    </p>
+    <a href="#contact" class="cta-button">Travaillons ensemble</a>
   </section>
 
-  <section id="services">
+  <section id="services" class="services">
     <h2>Nos Services</h2>
-    <div class="service">
-      <h3>Création de site vitrine</h3>
-      <p>Site simple et professionnel pour présenter votre activité.</p>
-      <a class="btn" href="https://wa.me/2250556109225">Commander</a>
-    </div>
-    <div class="service">
-      <h3>Création de site complet</h3>
-      <p>Site complet avec plusieurs pages, design personnalisé, formulaire de contact, responsive.</p>
-      <a class="btn" href="https://wa.me/2250556109225">Commander</a>
-    </div>
-    <div class="service">
-      <h3>Site e-commerce WhatsApp</h3>
-      <p>Boutique en ligne avec panier, catalogue, commande WhatsApp, paiement mobile intégré.</p>
-      <a class="btn" href="https://wa.me/2250556109225">Commander</a>
-    </div>
-    <div class="service">
-      <h3>Création de logo</h3>
-      <p>Logo unique, mémorable, adapté à votre activité.</p>
-      <a class="btn" href="https://wa.me/2250556109225">Commander</a>
-    </div>
-    <div class="service">
-      <h3>Carte de visite personnalisée</h3>
-      <p>Design professionnel prêt à imprimer, avec vos couleurs et infos.</p>
-      <a class="btn" href="https://wa.me/2250556109225">Commander</a>
+    <div class="service-list">
+      <div class="service">
+        <img src="images/service-icon.png" alt="Icône Service" />
+        <h3>Site vitrine</h3>
+        <p>Présentez votre activité avec un site élégant et rapide.</p>
+        <a href="#contact" class="cta-button">Commander</a>
+      </div>
+      <div class="service">
+        <img src="images/service-icon.png" alt="Icône Service" />
+        <h3>Site e-commerce</h3>
+        <p>Vendez vos produits en ligne avec commande WhatsApp ou paiement intégré.</p>
+        <a href="#contact" class="cta-button">Commander</a>
+      </div>
+      <div class="service">
+        <img src="images/service-icon.png" alt="Icône Service" />
+        <h3>Création de logo</h3>
+        <p>Identité visuelle unique et professionnelle pour votre marque.</p>
+        <a href="#contact" class="cta-button">Commander</a>
+      </div>
+      <div class="service">
+        <img src="images/service-icon.png" alt="Icône Service" />
+        <h3>Carte de visite</h3>
+        <p>Conception de cartes modernes et personnalisées pour vos contacts.</p>
+        <a href="#contact" class="cta-button">Commander</a>
+      </div>
     </div>
   </section>
 
-  <section id="temoignages">
-    <h2>Témoignages de clients</h2>
-    <blockquote>« Service rapide et très professionnel. Mon site est magnifique. » – Awa K.</blockquote>
-    <blockquote>« J’ai eu beaucoup plus de clients depuis que j’ai un site. Merci à Bakuss Web. » – M. Diabaté</blockquote>
-    <blockquote>« Excellent service, je recommande à 100 % ! » – Yao Design</blockquote>
-    <blockquote>« Le logo qu’ils m’ont fait est juste parfait. » – Zeinab Shop</blockquote>
-    <blockquote>« Très à l’écoute, patient, et travail bien fait. » – Coulibaly InfoTech</blockquote>
+  <section id="realisations" class="realisations">
+    <h2>Nos Réalisations</h2>
+    <p>Découvrez quelques projets réalisés pour nos clients.</p>
+    <a href="realisations.html" class="cta-button">Voir les projets</a>
   </section>
 
-  <section id="contact">
+  <section id="testimonials" class="testimonials">
+    <h2>Ils nous ont fait confiance</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <img src="images/client1.png" alt="Client 1">
+        <p>Bakuss Web Services m’a aidé à lancer mon entreprise en ligne. Je recommande !</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/client2.png" alt="Client 2">
+        <p>Service professionnel, rapide et très abordable.</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/client3.png" alt="Client 3">
+        <p>Je reçois maintenant des clients via WhatsApp directement. Merci !</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/client4.png" alt="Client 4">
+        <p>Très bon suivi, et site livré en quelques jours seulement.</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/client5.png" alt="Client 5">
+        <p>Rien à dire. Travail soigné. Bravo Bakuss Web Services !</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
     <h2>Contactez-nous</h2>
-    <form action="https://formsubmit.co/ton-email@example.com" method="POST">
-      <input type="text" name="Nom" placeholder="Votre nom" required>
-      <input type="email" name="Email" placeholder="Votre email" required>
-      <textarea name="Message" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-    <p>📞 WhatsApp : <a href="https://wa.me/2250556109225">+225 0556109225</a></p>
+    <p>Vous avez un projet ? Parlons-en dès maintenant via WhatsApp !</p>
+    <a href="https://wa.me/2250556109225" class="cta-button">Envoyer un message</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Bakuss Web Services – Koko, Bouaké</p>
+    <p>&copy; 2025 Bakuss Web Services. Tous droits réservés.</p>
   </footer>
 
 </body>
