@@ -1,147 +1,161 @@
+/* Variables Couleurs */
 :root {
-  --primary-color: #0066cc; /* Bleu légèrement plus accessible */
-  --secondary-color: #333;
-  --background-light: #f9f9f9;
-  --spacing: 20px;
-  --border-radius: 12px;
-  --transition: all 0.3s ease;
+  --primary: #FF6B35; /* Orange vif */
+  --primary-dark: #E5562B;
+  --secondary: #004E89; /* Bleu CI */
+  --dark: #2D2D2A;
+  --light: #F7F7F7;
+  --success: #3A7D44; /* Vert */
+  --warning: #FFD166;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Reset de base amélioré */
-body, h1, h2, h3, p {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Styles de Base */
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif; /* Stack de polices de secours */
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--dark);
   line-height: 1.6;
-  color: var(--secondary-color);
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
-/* Header */
-header {
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h2 span {
+  color: var(--primary);
+}
+
+/* Barre d'Urgence */
+.urgency-bar {
+  background: var(--primary);
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.urgency-cta {
+  color: white;
+  font-weight: 700;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+/* Bouton WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   z-index: 100;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.logo {
-  height: auto;
-  max-height: 80px;
+/* Cartes de Services */
+.service-card {
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.service-card.popular {
+  border: 2px solid var(--primary);
+}
+
+/* Style des Prix */
+.price {
+  margin: 20px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.current-price {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.current-price:after {
+  content: " FCFA";
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 1.2rem;
+}
+
+/* Méthodes de Paiement */
+.payment-methods {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.methods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.methods img {
+  height: 30px;
   width: auto;
-  transition: var(--transition);
 }
 
-/* Navigation */
-nav {
-  display: flex;
-  gap: var(--spacing);
+/* Témoignages */
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: var(--shadow);
 }
 
-nav a {
-  color: var(--secondary-color);
-  font-weight: 500;
-  padding: 8px 0;
-  position: relative;
-}
-
-nav a:hover {
-  color: var(--primary-color);
-}
-
-/* Hero Section */
-.hero {
+.client-info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 80px var(--spacing);
-  background: var(--background-light);
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
-.hero-content {
-  flex: 1;
-  max-width: 600px;
+.client-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3rem); /* Taille responsive */
-  margin-bottom: var(--spacing);
+.stars {
+  color: #FFD700;
+  font-size: 0.9rem;
 }
 
-/* ... (autres sections avec les mêmes principes) ... */
-
-/* Boutons CTA */
-.cta-button {
-  display: inline-block;
-  background: var(--primary-color);
-  color: white;
-  padding: 12px 24px;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  transition: var(--transition);
-  border: 2px solid transparent;
-}
-
-.cta-button:hover, 
-.cta-button:focus {
-  background: transparent;
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-  transform: translateY(-2px);
-  outline: none;
-}
-
-/* Accessibilité : focus visible */
-a:focus, 
-button:focus {
-  outline: 2px dashed var(--primary-color);
-  outline-offset: 3px;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
+  .service-grid {
+    grid-template-columns: 1fr;
   }
-
-  .hero {
-    flex-direction: column;
+  
+  .hero-content {
     text-align: center;
-    padding: 60px var(--spacing);
   }
-
-  .hero-image {
-    order: -1; /* Image en premier sur mobile */
-    margin-bottom: var(--spacing);
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --spacing: 15px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  
+  .urgency-bar .container {
+    flex-direction: column;
+    gap: 5px;
   }
 }

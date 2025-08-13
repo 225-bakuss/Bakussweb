@@ -1,56 +1,339 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CI">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bakuss Web Services crée des sites web professionnels à Bouaké. Sites vitrine, e-commerce, logos et cartes de visite sur mesure.">
-  <!-- Ajout de la meta description pour le SEO -->
-  <title>Bakuss Web Services | Création de sites web à Bouaké</title>
-  <!-- Titre plus descriptif -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <!-- Préconnexion pour améliorer les performances -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Bakuss Web Services | Création de Sites Web Pro en Côte d'Ivoire</title>
+  <meta name="description" content="🚀 Agence web ivoirienne spécialisée dans la création de sites vitrines et e-commerce. Prix en FCFA. Livraison express 72h. Paiement Orange Money/MTN Mobile Money">
+  
+  <!-- Schema.org pour la Côte d'Ivoire -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebDesignAgency",
+    "name": "Bakuss Web Services",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue des Entrepreneurs",
+      "addressLocality": "Bouaké",
+      "addressRegion": "CI",
+      "postalCode": "BP 1234"
+    },
+    "telephone": "+2250556109225",
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "priceRange": "100.000 - 500.000 FCFA",
+    "paymentAccepted": "Orange Money, MTN Mobile Money, Wave, Espèces"
+  }
+  </script>
+  
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <!-- Barre d'urgence -->
+  <div class="urgency-bar">
+    <div class="container">
+      🔥 OFFRE IVOIRIENNE : <strong>Site vitrine à 100.000 FCFA</strong> (au lieu de 200.000 FCFA) • 
+      Valable encore : <span id="countdown">48:00:00</span> • 
+      <a href="#contact" class="urgency-cta">JE PROFITE DE L'OFFRE</a>
+    </div>
+  </div>
+
+  <!-- Bouton WhatsApp Flottant -->
+  <a href="https://wa.me/2250556109225" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <img src="assets/whatsapp-icon.png" alt="Contact WhatsApp" width="50">
+    <span class="pulse-animation"></span>
+  </a>
+
   <header>
     <div class="container">
-      <img src="images/logo.png" alt="Logo Bakuss Web Services" class="logo" loading="lazy" width="120" height="80">
-      <!-- Ajout des attributs width/height et lazy loading -->
-      <nav aria-label="Navigation principale">
-        <!-- Amélioration de l'accessibilité -->
+      <img src="assets/logo-bakuss.png" alt="Bakuss Web Services Bouaké" width="180" loading="eager">
+      <nav>
         <a href="#about">À propos</a>
-        <a href="#services">Services</a>
-        <a href="realisations.html">Réalisations</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Nos Prix</a>
+        <a href="realisations.html">Nos Réalisations</a>
+        <a href="#contact" class="nav-cta">☎ 05 56 10 92 25</a>
       </nav>
     </div>
   </header>
 
-  <main> <!-- Balise main pour le contenu principal -->
+  <main>
+    <!-- Section Hero -->
     <section class="hero">
-      <div class="hero-content">
-        <h1>Création de sites web professionnels à Bouaké</h1>
-        <!-- H1 plus descriptif -->
-        <p>Nous transformons votre présence en ligne avec des designs modernes et performants.</p>
-        <a href="#services" class="cta-button" aria-label="Découvrir nos services">Découvrir nos services</a>
-      </div>
-      <div class="hero-image">
-        <img src="images/hero-image.webp" alt="Illustration de création de site web" loading="lazy" width="600" height="400">
-        <!-- Format WebP pour meilleure performance -->
+      <div class="container">
+        <div class="hero-content">
+          <h1>Votre <span>site web professionnel</span> livré en 72h à Bouaké</h1>
+          <p class="subtitle">Augmentez votre visibilité et attirez plus de clients ivoiriens</p>
+          
+          <div class="guarantee-badge">
+            <img src="assets/check-icon.png" alt="" width="20">
+            <span>Garantie <strong>satisfait ou remboursé</strong> sous 15 jours</span>
+          </div>
+          
+          <div class="cta-container">
+            <a href="tel:+2250556109225" class="cta-button pulse">☎ Appeler maintenant</a>
+            <div class="trust-signals">
+              <div class="trust-item">
+                <img src="assets/orange-money-icon.png" alt="" width="20">
+                <span>Paiement Mobile Money</span>
+              </div>
+              <div class="trust-item">
+                <img src="assets/verified-icon.png" alt="" width="20">
+                <span>Entreprise enregistrée</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img src="assets/site-web-ivoirien.webp" alt="Exemple de site web pour entreprise ivoirienne" width="600" loading="eager">
+        </div>
       </div>
     </section>
 
-    <!-- Sections restantes avec améliorations similaires -->
-    <!-- ... (le reste de votre HTML avec les mêmes optimisations) ... -->
+    <!-- Preuves Sociales -->
+    <section class="social-proof">
+      <div class="container">
+        <p>Ils nous font confiance :</p>
+        <div class="client-logos">
+          <img src="assets/client-1.png" alt="Restaurant Abidjan" loading="lazy" width="100">
+          <img src="assets/client-2.png" alt="Salon de coiffure Bouaké" loading="lazy" width="100">
+          <img src="assets/client-3.png" alt="Boutique en ligne CI" loading="lazy" width="100">
+        </div>
+      </div>
+    </section>
 
+    <!-- Nos Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Nos <span>Solutions & Tarifs</span></h2>
+        <p class="section-intro">Tous nos prix sont en FCFA (TTC)</p>
+        
+        <div class="service-grid">
+          <!-- Site Vitrine -->
+          <div class="service-card popular">
+            <div class="badge">LA PLUS POPULAIRE</div>
+            <h3>Site Vitrine</h3>
+            <div class="price">
+              <span class="old-price">200.000 FCFA</span>
+              <span class="current-price">100.000 FCFA</span>
+            </div>
+            <ul class="features">
+              <li>✓ 5 pages personnalisées</li>
+              <li>✓ Adapté mobile et ordinateur</li>
+              <li>✓ Hébergement 1 an offert</li>
+              <li>✓ Formulaire de contact</li>
+              <li>✓ Livraison express 72h</li>
+            </ul>
+            <a href="#contact" class="cta-button">Commander</a>
+          </div>
+          
+          <!-- Site E-commerce -->
+          <div class="service-card">
+            <h3>Boutique en Ligne</h3>
+            <div class="price">
+              <span class="current-price">300.000 FCFA</span>
+            </div>
+            <ul class="features">
+              <li>✓ Jusqu'à 50 produits</li>
+              <li>✓ Paiement Wave/Orange Money</li>
+              <li>✓ Commande par WhatsApp</li>
+              <li>✓ Gestion des stocks</li>
+              <li>✓ Livraison 5 jours</li>
+            </ul>
+            <a href="#contact" class="cta-button">Commander</a>
+          </div>
+          
+          <!-- Pack Complet -->
+          <div class="service-card">
+            <h3>Pack Excellence</h3>
+            <div class="price">
+              <span class="current-price">500.000 FCFA</span>
+            </div>
+            <ul class="features">
+              <li>✓ Site vitrine + e-commerce</li>
+              <li>✓ Logo professionnel</li>
+              <li>✓ Carte de visite</li>
+              <li>✓ 1 an de maintenance</li>
+              <li>✓ Formation incluse</li>
+            </ul>
+            <a href="#contact" class="cta-button">Commander</a>
+          </div>
+        </div>
+        
+        <div class="payment-methods">
+          <p>Modes de paiement acceptés :</p>
+          <div class="methods">
+            <img src="assets/orange-money.png" alt="Orange Money" width="50">
+            <img src="assets/mtn-money.png" alt="MTN Mobile Money" width="50">
+            <img src="assets/wave.png" alt="Wave" width="50">
+            <span>Espèces (Bouaké)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Processus -->
+    <section class="process">
+      <div class="container">
+        <h2>Notre <span>Processus</span></h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Consultation</h3>
+            <p>Appel gratuit pour comprendre vos besoins</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Paiement</h3>
+            <p>50% par Orange Money/MTN Mobile Money</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Livraison</h3>
+            <p>Site prêt en 3-5 jours max</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>Témoignages <span>Clients</span></h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="assets/client-kone.jpg" alt="M. Koné" width="60">
+              <div>
+                <h4>M. Koné (Abidjan)</h4>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+            <p>"Mon site de vente de cosmétiques a généré 450.000 FCFA de CA supplémentaire en 1 mois. Service sérieux et rapide !"</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="assets/client-diallo.jpg" alt="Mme Diallo" width="60">
+              <div>
+                <h4>Mme Diallo (Bouaké)</h4>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+            <p>"J'ai reçu 15 demandes de devis via mon nouveau site en une semaine. Je recommande Bakuss à tous les entrepreneurs ivoiriens !"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2>Questions <span>Fréquentes</span></h2>
+        
+        <div class="faq-item">
+          <button class="faq-question">Comment se passe le paiement ?</button>
+          <div class="faq-answer">
+            <p>Nous acceptons Orange Money, MTN Mobile Money et Wave. Un acompte de 50% est requis pour démarrer le projet.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Proposez-vous l'hébergement ?</button>
+          <div class="faq-answer">
+            <p>Oui ! Tous nos sites incluent l'hébergement pendant 1 an (renouvelable à 50.000 FCFA/an).</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Pouvez-vous me former ?</button>
+          <div class="faq-answer">
+            <p>Absolument. Nous offrons une formation gratuite de 1h par WhatsApp pour gérer votre site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <h2>Lancez votre <span>projet</span> aujourd'hui</h2>
+          <p class="subtitle">Remplissez ce formulaire ou appelez-nous directement</p>
+          
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Votre nom complet*</label>
+              <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Numéro WhatsApp*</label>
+              <input type="tel" id="phone" pattern="[0-9]{10}" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Service souhaité*</label>
+              <select id="service" required>
+                <option value="">-- Choisissez --</option>
+                <option value="Site Vitrine">Site Vitrine (100.000 FCFA)</option>
+                <option value="Boutique en Ligne">Boutique en Ligne (300.000 FCFA)</option>
+                <option value="Pack Excellence">Pack Excellence (500.000 FCFA)</option>
+              </select>
+            </div>
+            
+            <button type="submit" class="cta-button">➔ Envoyer ma demande</button>
+            
+            <div class="form-footer">
+              <img src="assets/secure-icon.png" alt="" width="16">
+              <span>Vos données sont 100% confidentielles</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Bakuss Web Services | Koko, Bouaké</p>
-    <p>Contact: <a href="https://wa.me/2250556109225" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-    <!-- Sécurité renforcée avec noopener noreferrer -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/logo-bakuss-white.png" alt="Bakuss Web Services" width="180">
+          <p>Votre partenaire digital en Côte d'Ivoire. Sites web professionnels à prix abordables.</p>
+          <div class="social-links">
+            <a href="#"><img src="assets/facebook-icon.png" alt="Facebook" width="20"></a>
+            <a href="#"><img src="assets/instagram-icon.png" alt="Instagram" width="20"></a>
+            <a href="https://wa.me/2250556109225"><img src="assets/whatsapp-icon.png" alt="WhatsApp" width="20"></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Nos Services</h3>
+          <ul>
+            <li><a href="#services">Sites Vitrine</a></li>
+            <li><a href="#services">Boutiques en Ligne</a></li>
+            <li><a href="#services">Création de Logo</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+2250556109225">☎ 05 56 10 92 25</a></li>
+            <li><a href="mailto:contact@bakuss.ci">✉ contact@bakuss.ci</a></li>
+            <li>📍 Bouaké, Côte d'Ivoire</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 Bakuss Web Services - Tous droits réservés</p>
+        <p>Entreprise enregistrée en Côte d'Ivoire</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>
