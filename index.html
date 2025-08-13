@@ -1,339 +1,558 @@
 <!DOCTYPE html>
-<html lang="fr-CI">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bakuss Web Services | Création de Sites Web Pro en Côte d'Ivoire</title>
-  <meta name="description" content="🚀 Agence web ivoirienne spécialisée dans la création de sites vitrines et e-commerce. Prix en FCFA. Livraison express 72h. Paiement Orange Money/MTN Mobile Money">
-  
-  <!-- Schema.org pour la Côte d'Ivoire -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebDesignAgency",
-    "name": "Bakuss Web Services",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rue des Entrepreneurs",
-      "addressLocality": "Bouaké",
-      "addressRegion": "CI",
-      "postalCode": "BP 1234"
-    },
-    "telephone": "+2250556109225",
-    "openingHours": "Mo-Sa 08:00-18:00",
-    "priceRange": "100.000 - 500.000 FCFA",
-    "paymentAccepted": "Orange Money, MTN Mobile Money, Wave, Espèces"
-  }
-  </script>
-  
-  <link rel="icon" href="assets/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Bakuss Web Services - Création de sites web et designs</title>
+  <style>
+    :root {
+      --primary: #008080;
+      --secondary: #006666;
+      --dark: #333;
+      --light: #f4f4f4;
+      --white: #fff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    /* Header et Slider */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+    
+    .slider {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+    
+    .slide {
+      width: 100%;
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+    }
+    
+    .slide::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    
+    .slide-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+    
+    .slide h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .slide p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      border: 2px solid var(--primary);
+    }
+    
+    .cta-button:hover {
+      background: transparent;
+      color: var(--white);
+    }
+    
+    /* Navigation */
+    nav {
+      background: var(--white);
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: all 0.3s;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    
+    .nav-links a:hover {
+      color: var(--white);
+      background: var(--primary);
+    }
+    
+    /* Sections communes */
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: var(--primary);
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--primary);
+      margin: 15px auto 0;
+    }
+    
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .service-img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .service-content {
+      padding: 20px;
+    }
+    
+    .service-content h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    
+    /* À propos */
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .about-img {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .about-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .about-text p {
+      margin-bottom: 20px;
+    }
+    
+    /* Réalisations */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .portfolio-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 250px;
+    }
+    
+    .portfolio-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .portfolio-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 128, 128, 0.9);
+      color: white;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+      transform: translateY(0);
+    }
+    
+    .portfolio-item:hover .portfolio-img {
+      transform: scale(1.1);
+    }
+    
+    /* Call to Action */
+    .cta-section {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .footer-links a {
+      color: var(--white);
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .slide h1 {
+        font-size: 2rem;
+      }
+      
+      .slide p {
+        font-size: 1rem;
+      }
+      
+      .nav-container {
+        flex-direction: column;
+      }
+      
+      .logo {
+        margin-bottom: 15px;
+      }
+      
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .nav-links a {
+        margin: 5px 10px;
+      }
+      
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-img {
+        order: -1;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Barre d'urgence -->
-  <div class="urgency-bar">
-    <div class="container">
-      🔥 OFFRE IVOIRIENNE : <strong>Site vitrine à 100.000 FCFA</strong> (au lieu de 200.000 FCFA) • 
-      Valable encore : <span id="countdown">48:00:00</span> • 
-      <a href="#contact" class="urgency-cta">JE PROFITE DE L'OFFRE</a>
+
+<!-- Slider Hero -->
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+      <div class="slide-content">
+        <h1>Création de sites web professionnels</h1>
+        <p>Des solutions sur mesure pour booster votre présence en ligne</p>
+        <a href="#contact" class="cta-button">Contactez-nous</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+      <div class="slide-content">
+        <h1>Designs graphiques percutants</h1>
+        <p>Logos, cartes de visite et flyers qui marquent les esprits</p>
+        <a href="#contact" class="cta-button">Demander un devis</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+      <div class="slide-content">
+        <h1>Solutions e-commerce clés en main</h1>
+        <p>Vendez vos produits en ligne 24h/24 avec une boutique optimisée</p>
+        <a href="#contact" class="cta-button">Démarrer mon projet</a>
+      </div>
     </div>
   </div>
+</div>
 
-  <!-- Bouton WhatsApp Flottant -->
-  <a href="https://wa.me/2250556109225" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <img src="assets/whatsapp-icon.png" alt="Contact WhatsApp" width="50">
-    <span class="pulse-animation"></span>
-  </a>
-
-  <header>
-    <div class="container">
-      <img src="assets/logo-bakuss.png" alt="Bakuss Web Services Bouaké" width="180" loading="eager">
-      <nav>
-        <a href="#about">À propos</a>
-        <a href="#services">Nos Prix</a>
-        <a href="realisations.html">Nos Réalisations</a>
-        <a href="#contact" class="nav-cta">☎ 05 56 10 92 25</a>
-      </nav>
+<!-- Navigation -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">Bakuss Web Services</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#portfolio">Réalisations</a>
+      <a href="#contact">Contact</a>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <main>
-    <!-- Section Hero -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Votre <span>site web professionnel</span> livré en 72h à Bouaké</h1>
-          <p class="subtitle">Augmentez votre visibilité et attirez plus de clients ivoiriens</p>
-          
-          <div class="guarantee-badge">
-            <img src="assets/check-icon.png" alt="" width="20">
-            <span>Garantie <strong>satisfait ou remboursé</strong> sous 15 jours</span>
-          </div>
-          
-          <div class="cta-container">
-            <a href="tel:+2250556109225" class="cta-button pulse">☎ Appeler maintenant</a>
-            <div class="trust-signals">
-              <div class="trust-item">
-                <img src="assets/orange-money-icon.png" alt="" width="20">
-                <span>Paiement Mobile Money</span>
-              </div>
-              <div class="trust-item">
-                <img src="assets/verified-icon.png" alt="" width="20">
-                <span>Entreprise enregistrée</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="hero-image">
-          <img src="assets/site-web-ivoirien.webp" alt="Exemple de site web pour entreprise ivoirienne" width="600" loading="eager">
-        </div>
-      </div>
-    </section>
-
-    <!-- Preuves Sociales -->
-    <section class="social-proof">
-      <div class="container">
-        <p>Ils nous font confiance :</p>
-        <div class="client-logos">
-          <img src="assets/client-1.png" alt="Restaurant Abidjan" loading="lazy" width="100">
-          <img src="assets/client-2.png" alt="Salon de coiffure Bouaké" loading="lazy" width="100">
-          <img src="assets/client-3.png" alt="Boutique en ligne CI" loading="lazy" width="100">
-        </div>
-      </div>
-    </section>
-
-    <!-- Nos Services -->
-    <section id="services" class="services">
-      <div class="container">
-        <h2>Nos <span>Solutions & Tarifs</span></h2>
-        <p class="section-intro">Tous nos prix sont en FCFA (TTC)</p>
-        
-        <div class="service-grid">
-          <!-- Site Vitrine -->
-          <div class="service-card popular">
-            <div class="badge">LA PLUS POPULAIRE</div>
-            <h3>Site Vitrine</h3>
-            <div class="price">
-              <span class="old-price">200.000 FCFA</span>
-              <span class="current-price">100.000 FCFA</span>
-            </div>
-            <ul class="features">
-              <li>✓ 5 pages personnalisées</li>
-              <li>✓ Adapté mobile et ordinateur</li>
-              <li>✓ Hébergement 1 an offert</li>
-              <li>✓ Formulaire de contact</li>
-              <li>✓ Livraison express 72h</li>
-            </ul>
-            <a href="#contact" class="cta-button">Commander</a>
-          </div>
-          
-          <!-- Site E-commerce -->
-          <div class="service-card">
-            <h3>Boutique en Ligne</h3>
-            <div class="price">
-              <span class="current-price">300.000 FCFA</span>
-            </div>
-            <ul class="features">
-              <li>✓ Jusqu'à 50 produits</li>
-              <li>✓ Paiement Wave/Orange Money</li>
-              <li>✓ Commande par WhatsApp</li>
-              <li>✓ Gestion des stocks</li>
-              <li>✓ Livraison 5 jours</li>
-            </ul>
-            <a href="#contact" class="cta-button">Commander</a>
-          </div>
-          
-          <!-- Pack Complet -->
-          <div class="service-card">
-            <h3>Pack Excellence</h3>
-            <div class="price">
-              <span class="current-price">500.000 FCFA</span>
-            </div>
-            <ul class="features">
-              <li>✓ Site vitrine + e-commerce</li>
-              <li>✓ Logo professionnel</li>
-              <li>✓ Carte de visite</li>
-              <li>✓ 1 an de maintenance</li>
-              <li>✓ Formation incluse</li>
-            </ul>
-            <a href="#contact" class="cta-button">Commander</a>
-          </div>
-        </div>
-        
-        <div class="payment-methods">
-          <p>Modes de paiement acceptés :</p>
-          <div class="methods">
-            <img src="assets/orange-money.png" alt="Orange Money" width="50">
-            <img src="assets/mtn-money.png" alt="MTN Mobile Money" width="50">
-            <img src="assets/wave.png" alt="Wave" width="50">
-            <span>Espèces (Bouaké)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Processus -->
-    <section class="process">
-      <div class="container">
-        <h2>Notre <span>Processus</span></h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Consultation</h3>
-            <p>Appel gratuit pour comprendre vos besoins</p>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Paiement</h3>
-            <p>50% par Orange Money/MTN Mobile Money</p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Livraison</h3>
-            <p>Site prêt en 3-5 jours max</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Témoignages -->
-    <section class="testimonials">
-      <div class="container">
-        <h2>Témoignages <span>Clients</span></h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <div class="client-info">
-              <img src="assets/client-kone.jpg" alt="M. Koné" width="60">
-              <div>
-                <h4>M. Koné (Abidjan)</h4>
-                <div class="stars">★★★★★</div>
-              </div>
-            </div>
-            <p>"Mon site de vente de cosmétiques a généré 450.000 FCFA de CA supplémentaire en 1 mois. Service sérieux et rapide !"</p>
-          </div>
-          <div class="testimonial-card">
-            <div class="client-info">
-              <img src="assets/client-diallo.jpg" alt="Mme Diallo" width="60">
-              <div>
-                <h4>Mme Diallo (Bouaké)</h4>
-                <div class="stars">★★★★★</div>
-              </div>
-            </div>
-            <p>"J'ai reçu 15 demandes de devis via mon nouveau site en une semaine. Je recommande Bakuss à tous les entrepreneurs ivoiriens !"</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-      <div class="container">
-        <h2>Questions <span>Fréquentes</span></h2>
-        
-        <div class="faq-item">
-          <button class="faq-question">Comment se passe le paiement ?</button>
-          <div class="faq-answer">
-            <p>Nous acceptons Orange Money, MTN Mobile Money et Wave. Un acompte de 50% est requis pour démarrer le projet.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">Proposez-vous l'hébergement ?</button>
-          <div class="faq-answer">
-            <p>Oui ! Tous nos sites incluent l'hébergement pendant 1 an (renouvelable à 50.000 FCFA/an).</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">Pouvez-vous me former ?</button>
-          <div class="faq-answer">
-            <p>Absolument. Nous offrons une formation gratuite de 1h par WhatsApp pour gérer votre site.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="contact-content">
-          <h2>Lancez votre <span>projet</span> aujourd'hui</h2>
-          <p class="subtitle">Remplissez ce formulaire ou appelez-nous directement</p>
-          
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Votre nom complet*</label>
-              <input type="text" id="name" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">Numéro WhatsApp*</label>
-              <input type="tel" id="phone" pattern="[0-9]{10}" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="service">Service souhaité*</label>
-              <select id="service" required>
-                <option value="">-- Choisissez --</option>
-                <option value="Site Vitrine">Site Vitrine (100.000 FCFA)</option>
-                <option value="Boutique en Ligne">Boutique en Ligne (300.000 FCFA)</option>
-                <option value="Pack Excellence">Pack Excellence (500.000 FCFA)</option>
-              </select>
-            </div>
-            
-            <button type="submit" class="cta-button">➔ Envoyer ma demande</button>
-            
-            <div class="form-footer">
-              <img src="assets/secure-icon.png" alt="" width="16">
-              <span>Vos données sont 100% confidentielles</span>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <img src="assets/logo-bakuss-white.png" alt="Bakuss Web Services" width="180">
-          <p>Votre partenaire digital en Côte d'Ivoire. Sites web professionnels à prix abordables.</p>
-          <div class="social-links">
-            <a href="#"><img src="assets/facebook-icon.png" alt="Facebook" width="20"></a>
-            <a href="#"><img src="assets/instagram-icon.png" alt="Instagram" width="20"></a>
-            <a href="https://wa.me/2250556109225"><img src="assets/whatsapp-icon.png" alt="WhatsApp" width="20"></a>
-          </div>
-        </div>
-        
-        <div class="footer-col">
-          <h3>Nos Services</h3>
-          <ul>
-            <li><a href="#services">Sites Vitrine</a></li>
-            <li><a href="#services">Boutiques en Ligne</a></li>
-            <li><a href="#services">Création de Logo</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="tel:+2250556109225">☎ 05 56 10 92 25</a></li>
-            <li><a href="mailto:contact@bakuss.ci">✉ contact@bakuss.ci</a></li>
-            <li>📍 Bouaké, Côte d'Ivoire</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>© 2024 Bakuss Web Services - Tous droits réservés</p>
-        <p>Entreprise enregistrée en Côte d'Ivoire</p>
+<!-- Services Section -->
+<section class="section" id="services">
+  <h2 class="section-title">Nos Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Site Vitrine" class="service-img">
+      <div class="service-content">
+        <h3>Site Vitrine</h3>
+        <p>Présentez votre activité avec un site web élégant et professionnel.</p>
+        <a href="#contact" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Commander</a>
       </div>
     </div>
-  </footer>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Site Multi-pages" class="service-img">
+      <div class="service-content">
+        <h3>Site Complet</h3>
+        <p>Site multi-pages avec toutes les fonctionnalités dont vous avez besoin.</p>
+        <a href="#contact" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Commander</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="E-commerce" class="service-img">
+      <div class="service-content">
+        <h3>Boutique en ligne</h3>
+        <p>Vendez vos produits en ligne avec une solution e-commerce complète.</p>
+        <a href="#contact" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Commander</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Logo Design" class="service-img">
+      <div class="service-content">
+        <h3>Création de Logo</h3>
+        <p>Un logo unique qui représente parfaitement votre marque.</p>
+        <a href="#contact" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Commander</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1545231499-67e9bafd6a93?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cartes de visite" class="service-img">
+      <div class="service-content">
+        <h3>Cartes de Visite</h3>
+        <p>Design et impression de cartes professionnelles haute qualité.</p>
+        <a href="#contact" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Commander</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Flyers" class="service-img">
+      <div class="service-content">
+        <h3>Flyers & Affiches</h3>
+        <p>Designs percutants pour vos campagnes promotionnelles.</p>
+        <a href="#contact" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">Commander</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="js/scripts.js"></script>
+<!-- À propos Section -->
+<section class="section" id="about">
+  <h2 class="section-title">À Propos de Nous</h2>
+  <div class="about-container">
+    <div class="about-text">
+      <p>Fondé par Kamagaté Bakary, Bakuss Web Services est une agence digitale basée en Côte d'Ivoire, spécialisée dans la création de solutions web et graphiques pour les entreprises et entrepreneurs.</p>
+      <p>Notre mission est de rendre le digital accessible à tous avec des solutions professionnelles à prix abordables. Nous combinons créativité, expertise technique et compréhension des besoins locaux pour offrir des résultats exceptionnels.</p>
+      <p>Avec plus de 5 ans d'expérience, nous avons accompagné plus de 50 clients dans la réalisation de leurs projets digitaux, allant du simple site vitrine aux boutiques e-commerce complexes.</p>
+      <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 20px;">En savoir plus</a>
+    </div>
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Équipe Bakuss Web Services">
+    </div>
+  </div>
+</section>
+
+<!-- Réalisations Section -->
+<section class="section" id="portfolio">
+  <h2 class="section-title">Nos Réalisations</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Projet 1" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <h3>Site Web - Restaurant Le Délicieux</h3>
+        <p>Site vitrine avec galerie photo et système de réservation</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Projet 2" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <h3>Boutique en ligne - Mode Africaine</h3>
+        <p>E-commerce avec paiement mobile et livraison locale</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1545231499-67e9bafd6a93?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Projet 3" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <h3>Identité visuelle - SARL TropiTech</h3>
+        <p>Logo, cartes de visite et papeterie d'entreprise</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+  <h2 style="margin-bottom: 20px;">Prêt à démarrer votre projet ?</h2>
+  <p style="max-width: 600px; margin: 0 auto 30px;">Contactez-nous dès maintenant pour un devis gratuit et personnalisé.</p>
+  <a href="#contact" class="cta-button" style="background: var(--white); color: var(--primary);">Contactez-nous</a>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="footer-content">
+    <h2>Bakuss Web Services</h2>
+    <p>Création de sites web, logos, cartes de visite et plus à prix abordable</p>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#portfolio">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="margin: 30px 0;">
+      <p>Téléphone: +225 05 5610 9225</p>
+      <p>Email: contact@bakussweb.com</p>
+      <p>Adresse: Abidjan, Côte d'Ivoire</p>
+    </div>
+    <div class="copyright">
+      &copy; 2023 Bakuss Web Services. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Slider automatique
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  }
+  
+  function updateSlider() {
+    const slider = document.querySelector('.slider');
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+  
+  setInterval(nextSlide, 5000);
+  
+  // Animation au scroll
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    document.querySelectorAll('.service-card, .portfolio-item').forEach(item => {
+      item.style.opacity = 0;
+      item.style.transform = 'translateY(20px)';
+      item.style.transition = 'all 0.6s ease-out';
+      observer.observe(item);
+    });
+  });
+</script>
+
 </body>
 </html>
