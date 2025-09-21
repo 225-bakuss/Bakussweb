@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Bakuss Web Services - Création de sites web professionnels, designs graphiques et solutions digitales abordables en Côte d'Ivoire">
+  <title>Bakuss Web Services - Solutions Digitales Professionnelles</title>
+  <style>
+    :root {
+      --primary-color: #008080;
+      --secondary-color: #006666;
+      --dark-color: #333;
+      --light-color: #f4f4f4;
+      --white: #fff;
+      --hover-color: rgba(255,255,255,0.2);
+    }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light-color);
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    header {
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    }
+    
+    nav {
+      background: var(--secondary-color);
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    nav a {
+      color: var(--white);
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    
+    nav a:hover {
+      background: var(--hover-color);
+    }
+    
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    h2 {
+      text-align: center;
+      color: var(--dark-color);
+      position: relative;
+      margin-bottom: 40px;
+    }
+    
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--primary-color);
+      margin: 15px auto 0;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      text-align: center;
+      cursor: pointer;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    
+    .quote {
+      font-size: 40px;
+      color: var(--primary-color);
+      line-height: 0;
+      margin-bottom: 20px;
+    }
+    
+    .stars {
+      color: #FFD700;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    
+    .cta-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      border: 2px solid var(--primary-color);
+    }
+    
+    .cta-button:hover {
+      background: transparent;
+      color: var(--primary-color);
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+      background: var(--white);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    
+    form input, form textarea, form select {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+    
+    form button {
+      background: var(--primary-color);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    form button:hover {
+      background: var(--secondary-color);
+    }
+    
+    .btn-text {
+      margin-right: 10px;
+    }
+    
+    .loading-icon {
+      display: none;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 20px;
+    }
+    
+    .footer-section {
+      text-align: center;
+    }
+    
+    .footer-section h3 {
+      color: var(--white);
+      margin-bottom: 15px;
+      position: relative;
+    }
+    
+    .footer-section h3::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--primary-color);
+      margin: 8px auto 0;
+    }
+    
+    .footer-section a {
+      display: block;
+      color: #ddd;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-section a:hover {
+      color: var(--white);
+    }
+    
+    .copyright {
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 20px;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        padding: 25px 10px;
+      }
+      
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav a {
+        margin: 5px;
+        font-size: 14px;
+        padding: 5px 8px;
+      }
+      
+      section {
+        padding: 30px 15px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bakuss Web Services</h1>
+  <p>Des solutions digitales professionnelles et abordables</p>
+</header>
+
+<nav>
+  <a href="#services">Nos services</a>
+  <a href="#creatifs">Création graphique</a>
+  <a href="#about">À propos</a>
+  <a href="#testimonials">Témoignages</a>
+  <a href="#order">Commande</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="services">
+  <h2>Nos services principaux</h2>
+  <div class="services-grid">
+    <div class="card">
+      <h3>Site Vitrine</h3>
+      <p>Présentez votre activité en ligne avec élégance.</p>
+    </div>
+    <div class="card">
+      <h3>Boutique en ligne</h3>
+      <p>Vendez vos produits 24h/24 avec une boutique optimisée.</p>
+    </div>
+    <div class="card">
+      <h3>Maintenance</h3>
+      <p>Assistance et mise à jour de votre site en continu.</p>
+    </div>
+  </div>
+  <div class="cta-container">
+    <a href="#order" class="cta-button">Commander un service</a>
+  </div>
+</section>
+
+<section id="creatifs">
+  <h2>🎨 Nos services créatifs</h2>
+  <div class="services-grid">
+    <div class="card">
+      <h3>Logo Professionnel</h3>
+      <p>Un logo unique pour marquer votre image.</p>
+    </div>
+    <div class="card">
+      <h3>Carte de visite</h3>
+      <p>Design + impression pro pour vos contacts.</p>
+    </div>
+    <div class="card">
+      <h3>Flyer / Affiche</h3>
+      <p>Pour vos événements et vos promotions.</p>
+    </div>
+    <div class="card">
+      <h3>Contenu Réseaux</h3>
+      <p>Visuels et stories pour Facebook, Insta, WhatsApp...</p>
+    </div>
+    <div class="card">
+      <h3>Vidéo Promo</h3>
+      <p>Mini vidéo animée pour présenter vos produits.</p>
+    </div>
+  </div>
+  <div class="cta-container">
+    <a href="#order" class="cta-button">Demander un devis</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>À propos</h2>
+  <div class="card" style="max-width: 800px; margin: 0 auto;">
+    <p style="text-align: center;">
+      Je suis Kamagaté Bakary, fondateur de Bakuss Web Services. Nous sommes spécialisés dans la création de sites web professionnels,
+      designs modernes et optimisés pour booster la visibilité de votre entreprise. Notre mission : fournir des services de qualité à moindre coût.
+    </p>
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>Ils nous font confiance</h2>
+  <div class="services-grid">
+    <div class="card">
+      <div class="quote">"</div>
+      <p>Service rapide et de qualité. Mon site est top !</p>
+      <strong>- Aminata D.</strong>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="card">
+      <div class="quote">"</div>
+      <p>J'ai gagné plus de clients depuis mon site avec Bakuss.</p>
+      <strong>- Jean M.</strong>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="card">
+      <div class="quote">"</div>
+      <p>Excellent rapport qualité-prix. Je recommande.</p>
+      <strong>- Serge K.</strong>
+      <div class="stars">★★★★☆</div>
+    </div>
+    <div class="card">
+      <div class="quote">"</div>
+      <p>Design impeccable et service client réactif.</p>
+      <strong>- Fatou S.</strong>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="card">
+      <div class="quote">"</div>
+      <p>Bakary est un vrai pro. Je suis très satisfait.</p>
+      <strong>- Idriss T.</strong>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <h2>Formulaire de commande</h2>
+  <form id="order-form">
+    <input type="text" placeholder="Votre nom*" required>
+    <input type="email" placeholder="Votre e-mail*" required>
+    <input type="tel" placeholder="Téléphone">
+    <input type="text" placeholder="Nom de votre entreprise">
+    <select required>
+      <option value="">Choisir un service*</option>
+      <option>Site Vitrine</option>
+      <option>Boutique en ligne</option>
+      <option>Maintenance</option>
+      <option>Logo Professionnel</option>
+      <option>Carte de visite</option>
+      <option>Flyer / Affiche</option>
+      <option>Contenu Réseaux</option>
+      <option>Vidéo Promo</option>
+      <option>Autre</option>
+    </select>
+    <textarea rows="5" placeholder="Décrivez votre projet..."></textarea>
+    <button type="submit">
+      <span class="btn-text">Envoyer la demande</span>
+      <span class="loading-icon">⌛</span>
+    </button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+    <p>
+      📞 <strong>+225 05 5610 9225</strong> <br><br>
+      💬 WhatsApp : <a href="https://wa.me/2250556109225" style="color: var(--primary-color);">Cliquez ici pour discuter</a> <br><br>
+      📧 Email : <a href="mailto:bakussweb@gmail.com" style="color: var(--primary-color);">bakussweb@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-section">
+      <h3>Services</h3>
+      <a href="#services">Développement Web</a>
+      <a href="#creatifs">Design Graphique</a>
+      <a href="#creatifs">Marketing Digital</a>
+    </div>
+    <div class="footer-section">
+      <h3>Entreprise</h3>
+      <a href="#about">À propos</a>
+      <a href="#testimonials">Témoignages</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Abidjan, Côte d'Ivoire</p>
+      <p>Ouvert 7j/7</p>
+      <p>bakussweb@gmail.com</p>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy; 2025 Bakuss Web Services - Tous droits réservés
+  </div>
+</footer>
+
+<script>
+  // Animation du formulaire
+  const orderForm = document.getElementById('order-form');
+  
+  if (orderForm) {
+    orderForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitButton = this.querySelector('button');
+      const btnText = submitButton.querySelector('.btn-text');
+      const loadingIcon = submitButton.querySelector('.loading-icon');
+      
+      // Afficher l'icône de chargement
+      btnText.textContent = 'Envoi en cours...';
+      loadingIcon.style.display = 'inline';
+      
+      // Simuler l'envoi (à remplacer par un vrai envoi AJAX)
+      setTimeout(() => {
+        btnText.textContent = 'Message envoyé !';
+        loadingIcon.style.display = 'none';
+        orderForm.reset();
+        
+        // Réinitialiser après 3 secondes
+        setTimeout(() => {
+          btnText.textContent = 'Envoyer la demande';
+        }, 3000);
+      }, 1500);
+    });
+  }
+  
+  // Animation au défilement
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'all 0.6s ease-out';
+      observer.observe(section);
+    });
+  });
+</script>
+
+</body>
+</html>
