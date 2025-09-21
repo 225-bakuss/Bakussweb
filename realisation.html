@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nos Réalisations - Bakuss Web Services</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img src="images/logo.png" alt="Logo Bakuss" class="logo" style="height: 80px;">
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="#projects">Réalisations</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Découvrez nos projets récents</h1>
+      <p>Nous accompagnons des entreprises de divers secteurs dans leur digitalisation.</p>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-image.png" alt="Illustration digitale">
+    </div>
+  </section>
+
+  <section id="projects" class="about">
+    <h2>Nos Réalisations</h2>
+    <div class="realisations-grid">
+      <div class="card">
+        <img src="images/real1.png" alt="Site quincaillerie">
+        <h3>Site Quincaillerie</h3>
+        <p>Un site complet pour un magasin de vente de matériaux à Bouaké.</p>
+        <a href="https://225-bakuss.github.io/Maquette-quincaillerie-/" target="_blank" class="btn">Voir</a>
+      </div>
+      <div class="card">
+        <img src="images/real2.png" alt="Site MotoGlow">
+        <h3>MotoGlow</h3>
+        <p>Site e-commerce avec catalogue LED pour motards.</p>
+        <a href="https://bit.ly/MotoGlow" target="_blank" class="btn">Voir</a>
+      </div>
+      <!-- Tu peux ajouter d'autres projets ici -->
+    </div>
+  </section>
+
+  <section id="blog" class="services">
+    <h2>Blog & Conseils</h2>
+    <div class="realisations-grid">
+      <div class="card">
+        <h3>Pourquoi un site web est essentiel aujourd'hui ?</h3>
+        <p>Un site vous permet de toucher de nouveaux clients, d'exister sur Google, et d'inspirer confiance dès la première impression.</p>
+      </div>
+      <div class="card">
+        <h3>Comment réussir sa présence en ligne ?</h3>
+        <p>En combinant site professionnel + design + stratégie WhatsApp + réseaux sociaux = visibilité et clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Demandez votre site maintenant</h2>
+    <form action="https://formsubmit.co/bakussweb@gmail.com" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre e-mail" required>
+      <input type="text" name="telephone" placeholder="Votre numéro WhatsApp" required>
+      <textarea name="message" placeholder="Quel type de site ou besoin avez-vous ?" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+    <p>Ou contactez-nous directement sur <a href="https://wa.me/2250556109225" target="_blank">WhatsApp</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bakuss Web Services | Koko, Bouaké</p>
+  </footer>
+
+  <!-- Script Mode Jour/Nuit -->
+  <script>
+    const toggleBtn = document.createElement("button");
+    toggleBtn.className = "theme-toggle";
+    toggleBtn.innerText = "🌙 Mode Nuit";
+    document.querySelector("header .container").appendChild(toggleBtn);
+
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    document.body.classList.add(currentTheme + "-mode");
+    toggleBtn.innerText = currentTheme === "dark" ? "🌙 Mode Nuit" : "☀️ Mode Jour";
+
+    toggleBtn.addEventListener("click", () => {
+      if (document.body.classList.contains("dark-mode")) {
+        document.body.classList.replace("dark-mode", "light-mode");
+        toggleBtn.innerText = "☀️ Mode Jour";
+        localStorage.setItem("theme", "light");
+      } else {
+        document.body.classList.replace("light-mode", "dark-mode");
+        toggleBtn.innerText = "🌙 Mode Nuit";
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  </script>
+
+</body>
+</html>
