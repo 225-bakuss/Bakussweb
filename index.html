@@ -1,144 +1,210 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bakuss Web Services</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bakuss Web Services — Création de sites & Branding</title>
+  <meta name="description" content="Bakuss Web Services à Bouaké — création de sites vitrines, e-commerce, logos et cartes de visite. Design moderne, optimisation et support WhatsApp." />
   <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font : Poppins (Google) - si tu veux, remplace ou héberge localement -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <img src="images/logo.png" alt="Logo Bakuss" class="logo" style="height: 80px;">
-      <nav>
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Bakuss Web Services — Accueil">
+        <img src="images/logo.png" alt="Logo Bakuss Web Services" class="logo">
+      </a>
+
+      <nav id="primary-navigation" class="nav" role="navigation" aria-label="Menu principal">
         <a href="#about">À propos</a>
         <a href="#services">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Basculer le thème">🌙</button>
+        <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Bienvenue chez Bakuss Web Services</h1>
-      <p>Création de sites web professionnels et designs pour tous.</p>
-      <a href="#services" class="cta-button">Découvrir nos services</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Présentation">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Boostez votre présence en ligne avec <span class="accent">Bakuss Web Services</span></h1>
+          <p class="lead">Sites web performants, boutiques en ligne, logos et supports imprimés. Conception pensée pour convertir et durer.</p>
+          <p class="meta">Service local à Bouaké — livraison rapide — assistance WhatsApp.</p>
+          <div class="hero-ctas">
+            <a href="#services" class="btn cta">Découvrir nos services</a>
+            <a href="#contact" class="btn ghost">Demander un devis</a>
+          </div>
+        </div>
+
+        <figure class="hero-figure" aria-hidden="true">
+          <img src="images/hero-image.png"
+               alt="Illustration digitale"
+               loading="lazy"
+               class="hero-img">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>À propos</h2>
+        <p>Basés à Bouaké, nous accompagnons les entrepreneurs et commerces pour créer une présence en ligne professionnelle : sites rapides, design clair, et stratégie pour obtenir des clients.</p>
+        <p><strong>Notre promesse :</strong> un site prêt à générer des contacts. On conçoit, on optimise et on vous forme à l’usage (WhatsApp / gestion de commandes).</p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Nos services</h2>
+        <div class="grid services-grid">
+          <article class="card">
+            <img src="images/vitrine.png" alt="Icône site vitrine" loading="lazy">
+            <h3>Site Vitrine</h3>
+            <p>Présentation professionnelle pour présenter vos services et capter des leads.</p>
+            <a class="btn small" href="#contact">Commander</a>
+          </article>
+
+          <article class="card">
+            <img src="images/sensible.png" alt="Icône site complet" loading="lazy">
+            <h3>Site Complet</h3>
+            <p>Pages multiples, blog, formulaires et optimisation SEO de base.</p>
+            <a class="btn small" href="#contact">Commander</a>
+          </article>
+
+          <article class="card">
+            <img src="images/commerce-electronique.png" alt="Icône e-commerce" loading="lazy">
+            <h3>Site E-commerce</h3>
+            <p>Catalogue, paiement et commandes par WhatsApp — tout prêt pour vendre.</p>
+            <a class="btn small" href="#contact">Commander</a>
+          </article>
+
+          <article class="card">
+            <img src="images/logo-design.png" alt="Icône création logo" loading="lazy">
+            <h3>Logo & Branding</h3>
+            <p>Identité visuelle unique : logo, déclinaisons et fichiers prêts à l'impression.</p>
+            <a class="btn small" href="#contact">Commander</a>
+          </article>
+
+          <article class="card">
+            <img src="images/business-card.png" alt="Icône carte de visite" loading="lazy">
+            <h3>Cartes de visite</h3>
+            <p>Design élégant et prêt pour l’impression — faits pour marquer les esprits.</p>
+            <a class="btn small" href="#contact">Commander</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2>Témoignages</h2>
+        <div class="grid testimonials-grid">
+          <blockquote class="testimonial">
+            <p>« Excellent travail — mon site a changé la perception de mes clients. »</p>
+            <footer>— Client satisfait</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>« Livraison rapide, support réactif. Je recommande Bakuss. »</p>
+            <footer>— Boutique locale</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>« Design moderne et vrai accompagnement commercial. »</p>
+            <footer>— MotoGlow</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact & commande</h2>
+        <p class="lead">Prêt à commencer ? Laissez vos infos — on vous répond rapidement via e-mail ou WhatsApp.</p>
+
+        <form class="contact-form" action="https://formsubmit.co/bakussweb@gmail.com" method="POST" novalidate>
+          <!-- accessibility: visually hidden labels -->
+          <label class="sr-only" for="nom">Votre nom</label>
+          <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Votre e-mail" required>
+
+          <label class="sr-only" for="telephone">Téléphone</label>
+          <input id="telephone" name="telephone" type="tel" placeholder="Numéro WhatsApp (ex: +225...)" required>
+
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre besoin…" rows="5" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn cta">Envoyer</button>
+            <a class="btn ghost" href="https://wa.me/2250556109225" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© 2025 Bakuss Web Services — Koko, Bouaké. <span class="muted">Votre succès est notre mission.</span></p>
     </div>
-    <div class="hero-image">
-      <img src="images/hero-image.png" alt="Illustration digitale">
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <h2>À propos de nous</h2>
-    <p>Basé à Bouaké, Bakuss Web Services vous accompagne dans la digitalisation de votre activité avec des sites modernes, rapides et adaptés à votre budget. Nous croyons que chaque entreprise mérite une présence en ligne de qualité.</p>
-    <p><strong>Notre objectif :</strong> faire de votre succès notre priorité.</p>
-    <a href="#contact" class="cta-button">Parlez-nous de votre projet</a>
-  </section>
-
-  <section id="services" class="services">
-    <h2>Nos Services</h2>
-    <div class="service-list">
-      <div class="service">
-        <img src="images/vitrine.png" alt="Icône Site Vitrine">
-        <h3>Site Vitrine</h3>
-        <p>Un site simple et efficace pour présenter votre activité.</p>
-        <a href="#contact" class="cta-button">Commander</a>
-      </div>
-      <div class="service">
-        <img src="images/sensible.png" alt="Icône Site Complet">
-        <h3>Site Complet</h3>
-        <p>Pages multiples, blog, formulaire de contact intégré.</p>
-        <a href="#contact" class="cta-button">Commander</a>
-      </div>
-      <div class="service">
-        <img src="images/commerce-electronique.png" alt="Icône E-commerce">
-        <h3>Site E-commerce</h3>
-        <p>Catalogue, commande WhatsApp, paiement intégré.</p>
-        <a href="#contact" class="cta-button">Commander</a>
-      </div>
-      <div class="service">
-        <img src="images/logo-design.png" alt="Icône logo">
-        <h3>Création de logo</h3>
-        <p>Logo sur-mesure pour votre marque, livré en PNG.</p>
-        <a href="#contact" class="cta-button">Commander</a>
-      </div>
-      <div class="service">
-        <img src="images/business-card.png" alt="Icône carte">
-        <h3>Carte de visite</h3>
-        <p>Design élégant et professionnel, prêt à imprimer.</p>
-        <a href="#contact" class="cta-button">Commander</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="testimonials" class="testimonials">
-    <h2>Témoignages Clients</h2>
-    <div class="testimonial-list">
-      <div class="testimonial">
-        <img src="images/client1.png" alt="Client 1">
-        <p>Excellent travail de Bakuss, je suis très satisfait.</p>
-      </div>
-      <div class="testimonial">
-        <img src="images/client2.png" alt="Client 2">
-        <p>Mon site est rapide et beau, je recommande !</p>
-      </div>
-      <div class="testimonial">
-        <img src="images/client3.png" alt="Client 3">
-        <p>Grâce à eux, j’ai plus de visibilité en ligne.</p>
-      </div>
-      <div class="testimonial">
-        <img src="images/client4.png" alt="Client 4">
-        <p>Service client réactif, site livré en 3 jours !</p>
-      </div>
-      <div class="testimonial">
-        <img src="images/client5.png" alt="Client 5">
-        <p>Des pros, rien à dire. Merci à toute l’équipe !</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact & Commande</h2>
-    <form action="https://formsubmit.co/bakussweb@gmail.com" method="POST">
-      <input type="text" name="nom" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre e-mail" required>
-      <input type="text" name="telephone" placeholder="Votre numéro WhatsApp" required>
-      <textarea name="message" placeholder="Décrivez votre besoin…" required></textarea>
-      <button type="submit" class="cta-button">Envoyer</button>
-    </form>
-    <p>Ou discutez directement sur <a href="https://wa.me/2250556109225" target="_blank">WhatsApp</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Bakuss Web Services | Koko, Bouaké</p>
   </footer>
 
-  <!-- Script Mode Jour/Nuit -->
+  <!-- Scripts : menu mobile + theme toggle -->
   <script>
-    const toggleBtn = document.createElement("button");
-    toggleBtn.className = "theme-toggle";
-    toggleBtn.innerText = "🌙 Mode Nuit";
-    document.querySelector("header .container").appendChild(toggleBtn);
+    (function () {
+      const nav = document.getElementById('primary-navigation');
+      const navToggle = document.getElementById('nav-toggle');
+      const themeToggle = document.getElementById('theme-toggle');
 
-    const currentTheme = localStorage.getItem("theme") || "dark";
-    document.body.classList.add(currentTheme + "-mode");
-    toggleBtn.innerText = currentTheme === "dark" ? "🌙 Mode Nuit" : "☀️ Mode Jour";
+      // Mobile nav toggle
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+        navToggle.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('nav-open');
+      });
 
-    toggleBtn.addEventListener("click", () => {
-      if (document.body.classList.contains("dark-mode")) {
-        document.body.classList.replace("dark-mode", "light-mode");
-        toggleBtn.innerText = "☀️ Mode Jour";
-        localStorage.setItem("theme", "light");
-      } else {
-        document.body.classList.replace("light-mode", "dark-mode");
-        toggleBtn.innerText = "🌙 Mode Nuit";
-        localStorage.setItem("theme", "dark");
-      }
-    });
+      // Theme (dark / light) with localStorage & prefers-color-scheme fallback
+      const saved = localStorage.getItem('site-theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initial = saved ? saved : (prefersDark ? 'dark' : 'light');
+
+      document.documentElement.setAttribute('data-theme', initial);
+      themeToggle.setAttribute('aria-pressed', initial === 'dark');
+      themeToggle.textContent = initial === 'dark' ? '🌙' : '☀️';
+
+      themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('site-theme', next);
+        themeToggle.setAttribute('aria-pressed', next === 'dark');
+        themeToggle.textContent = next === 'dark' ? '🌙' : '☀️';
+      });
+
+      // Close mobile nav when clicking outside (optional)
+      document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !navToggle.contains(e.target) && nav.classList.contains('nav-open')) {
+          nav.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', false);
+        }
+      });
+    })();
   </script>
 
 </body>

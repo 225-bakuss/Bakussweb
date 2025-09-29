@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nos Réalisations - Bakuss Web Services</title>
+  <title>Réalisations - Bakuss Web Services</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
@@ -14,94 +14,86 @@
       <img src="images/logo.png" alt="Logo Bakuss" class="logo" style="height: 80px;">
       <nav>
         <a href="index.html">Accueil</a>
-        <a href="#projects">Réalisations</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#services">Services</a>
+        <a href="realisations.html" class="active">Réalisations</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
+      <button class="mode-toggle" id="modeToggle">🌙</button>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero small-hero">
     <div class="hero-content">
-      <h1>Découvrez nos projets récents</h1>
-      <p>Nous accompagnons des entreprises de divers secteurs dans leur digitalisation.</p>
-    </div>
-    <div class="hero-image">
-      <img src="images/hero-image.png" alt="Illustration digitale">
+      <h1>Nos Réalisations</h1>
+      <p>Découvrez quelques projets réalisés par Bakuss Web Services.</p>
     </div>
   </section>
 
-  <section id="projects" class="about">
-    <h2>Nos Réalisations</h2>
-    <div class="realisations-grid">
-      <div class="card">
-        <img src="images/real1.png" alt="Site quincaillerie">
-        <h3>Site Quincaillerie</h3>
-        <p>Un site complet pour un magasin de vente de matériaux à Bouaké.</p>
-        <a href="https://225-bakuss.github.io/Maquette-quincaillerie-/" target="_blank" class="btn">Voir</a>
+  <section id="portfolio" class="portfolio">
+    <h2>Projets Récents</h2>
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item">
+        <img src="images/projet1.png" alt="Projet 1">
+        <h3>Site E-commerce</h3>
+        <p>Boutique en ligne avec paiement intégré et gestion catalogue.</p>
+        <a href="#" target="_blank" class="cta-button">Voir le site</a>
       </div>
-      <div class="card">
-        <img src="images/real2.png" alt="Site MotoGlow">
-        <h3>MotoGlow</h3>
-        <p>Site e-commerce avec catalogue LED pour motards.</p>
-        <a href="https://bit.ly/MotoGlow" target="_blank" class="btn">Voir</a>
+
+      <div class="portfolio-item">
+        <img src="images/projet2.png" alt="Projet 2">
+        <h3>Site Vitrine</h3>
+        <p>Présentation moderne pour une entreprise locale.</p>
+        <a href="#" target="_blank" class="cta-button">Voir le site</a>
       </div>
-      <!-- Tu peux ajouter d'autres projets ici -->
+
+      <div class="portfolio-item">
+        <img src="images/projet3.png" alt="Projet 3">
+        <h3>Application Web</h3>
+        <p>Plateforme sur-mesure avec tableau de bord interactif.</p>
+        <a href="#" target="_blank" class="cta-button">Voir le site</a>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="images/projet4.png" alt="Projet 4">
+        <h3>Logo & Identité visuelle</h3>
+        <p>Création d’une identité forte et professionnelle.</p>
+        <a href="#" target="_blank" class="cta-button">Voir le projet</a>
+      </div>
+
     </div>
   </section>
 
-  <section id="blog" class="services">
-    <h2>Blog & Conseils</h2>
-    <div class="realisations-grid">
-      <div class="card">
-        <h3>Pourquoi un site web est essentiel aujourd'hui ?</h3>
-        <p>Un site vous permet de toucher de nouveaux clients, d'exister sur Google, et d'inspirer confiance dès la première impression.</p>
-      </div>
-      <div class="card">
-        <h3>Comment réussir sa présence en ligne ?</h3>
-        <p>En combinant site professionnel + design + stratégie WhatsApp + réseaux sociaux = visibilité et clients.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Demandez votre site maintenant</h2>
-    <form action="https://formsubmit.co/bakussweb@gmail.com" method="POST">
-      <input type="text" name="nom" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre e-mail" required>
-      <input type="text" name="telephone" placeholder="Votre numéro WhatsApp" required>
-      <textarea name="message" placeholder="Quel type de site ou besoin avez-vous ?" required></textarea>
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
-    <p>Ou contactez-nous directement sur <a href="https://wa.me/2250556109225" target="_blank">WhatsApp</a></p>
+  <section class="cta-section">
+    <h2>Un projet en tête ?</h2>
+    <p>Nous serons ravis de le concrétiser avec vous.</p>
+    <a href="index.html#contact" class="cta-button">Contactez-nous</a>
   </section>
 
   <footer>
     <p>&copy; 2025 Bakuss Web Services | Koko, Bouaké</p>
   </footer>
 
-  <!-- Script Mode Jour/Nuit -->
   <script>
-    const toggleBtn = document.createElement("button");
-    toggleBtn.className = "theme-toggle";
-    toggleBtn.innerText = "🌙 Mode Nuit";
-    document.querySelector("header .container").appendChild(toggleBtn);
-
-    const currentTheme = localStorage.getItem("theme") || "dark";
-    document.body.classList.add(currentTheme + "-mode");
-    toggleBtn.innerText = currentTheme === "dark" ? "🌙 Mode Nuit" : "☀️ Mode Jour";
-
+    // Mode jour/nuit
+    const toggleBtn = document.getElementById("modeToggle");
     toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
       if (document.body.classList.contains("dark-mode")) {
-        document.body.classList.replace("dark-mode", "light-mode");
-        toggleBtn.innerText = "☀️ Mode Jour";
-        localStorage.setItem("theme", "light");
-      } else {
-        document.body.classList.replace("light-mode", "dark-mode");
-        toggleBtn.innerText = "🌙 Mode Nuit";
+        toggleBtn.textContent = "☀️";
         localStorage.setItem("theme", "dark");
+      } else {
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("theme", "light");
       }
     });
+
+    // Charger le mode choisi
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️";
+    }
   </script>
 
 </body>
