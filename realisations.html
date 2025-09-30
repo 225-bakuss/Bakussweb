@@ -1,114 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Réalisations - Bakuss Web Services</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Réalisations</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Toggle mode jour/nuit -->
+  <button id="toggle-theme">🌙</button>
 
+  <!-- Navigation -->
   <header>
-    <div class="container">
-      <img src="images/logo.png" alt="Logo Bakuss" class="logo" style="height: 80px;">
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="index.html#about">À propos</a>
-        <a href="index.html#services">Services</a>
-        <a href="realisations.html" class="active">Réalisations</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-      <button id="theme-toggle" class="theme-toggle">🌙</button>
-    </div>
+    <nav>
+      <h1>Bakuss Web Services</h1>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="realisations.html" class="active">Réalisations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero small-hero">
-    <div class="hero-content">
-      <h1>Nos Réalisations</h1>
-      <p>Découvrez quelques-uns de nos projets web et design réalisés pour nos clients.</p>
-    </div>
-  </section>
+  <!-- Section principale -->
+  <main>
+    <section class="intro">
+      <h2>Mes Réalisations</h2>
+      <p>Voici quelques projets que j’ai conçus et développés. Chaque projet reflète ma passion pour un web moderne, esthétique et performant.</p>
+    </section>
 
-  <section class="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="images/projet1.png" alt="Projet 1">
-        <div class="portfolio-info">
-          <h3>Site Vitrine - Entreprise Locale</h3>
-          <p>Un site vitrine moderne et responsive pour une entreprise de services.</p>
+    <section class="realisations-grid">
+      <article class="card">
+        <img src="https://picsum.photos/400/250?random=1" alt="Projet 1">
+        <div class="card-content">
+          <h3>Site e-commerce</h3>
+          <p>Boutique en ligne moderne avec intégration du paiement mobile money et interface responsive.</p>
+          <a href="#" class="btn">Voir le projet</a>
         </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/projet2.png" alt="Projet 2">
-        <div class="portfolio-info">
-          <h3>Site E-commerce - Boutique Mode</h3>
-          <p>Boutique en ligne avec catalogue, paiement intégré et commande WhatsApp.</p>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/projet3.png" alt="Projet 3">
-        <div class="portfolio-info">
-          <h3>Logo - Marque Cosmétique</h3>
-          <p>Création d’un logo élégant et professionnel adapté à l’image de la marque.</p>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/projet4.png" alt="Projet 4">
-        <div class="portfolio-info">
-          <h3>Carte de Visite - Cabinet Conseil</h3>
-          <p>Design minimaliste et futuriste, prêt à l’impression professionnelle.</p>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/projet5.png" alt="Projet 5">
-        <div class="portfolio-info">
-          <h3>Site Complet - Blog d’Actualité</h3>
-          <p>Blog moderne avec articles, catégories et gestion de contenu.</p>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/projet6.png" alt="Projet 6">
-        <div class="portfolio-info">
-          <h3>Site E-commerce - Accessoires Tech</h3>
-          <p>Boutique rapide et intuitive pour gadgets et accessoires technologiques.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </article>
 
-  <section class="cta-section">
-    <h2>Vous voulez un projet comme celui-ci ?</h2>
-    <a href="index.html#contact" class="cta-button">Contactez-nous</a>
-  </section>
+      <article class="card">
+        <img src="https://picsum.photos/400/250?random=2" alt="Projet 2">
+        <div class="card-content">
+          <h3>Application mobile</h3>
+          <p>Une app Android intuitive pour la gestion des ventes et inventaires, optimisée pour les petites entreprises.</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </div>
+      </article>
 
+      <article class="card">
+        <img src="https://picsum.photos/400/250?random=3" alt="Projet 3">
+        <div class="card-content">
+          <h3>Portfolio personnel</h3>
+          <p>Un site élégant présentant mes compétences et mes services, avec mode sombre intégré.</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/400/250?random=4" alt="Projet 4">
+        <div class="card-content">
+          <h3>Plateforme éducative</h3>
+          <p>Un espace interactif pour les cours en ligne avec vidéos, quiz et tableau de bord utilisateur.</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
   <footer>
-    <p>&copy; 2025 Bakuss Web Services | Koko, Bouaké</p>
+    <p>&copy; 2025 Bakuss Web Services. Tous droits réservés.</p>
   </footer>
 
   <script>
-    // Script mode jour/nuit
-    const toggleButton = document.getElementById("theme-toggle");
-    const body = document.body;
-
-    // Vérifier préférence sauvegardée
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark");
-      toggleButton.textContent = "☀️";
-    }
-
-    toggleButton.addEventListener("click", () => {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-        toggleButton.textContent = "☀️";
-      } else {
-        localStorage.setItem("theme", "light");
-        toggleButton.textContent = "🌙";
-      }
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
     });
   </script>
-
 </body>
 </html>
