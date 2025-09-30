@@ -1,84 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mes Réalisations</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nos Réalisations - Bakuss Web Services</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
-  <!-- Toggle mode jour/nuit -->
-  <button id="toggle-theme">🌙</button>
 
-  <!-- Navigation -->
+  <!-- Header -->
   <header>
-    <nav>
-      <h1>Bakuss Web Services</h1>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="realisations.html" class="active">Réalisations</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <img src="images/logo.png" alt="Logo Bakuss" class="logo large-logo">
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="realisations.html" class="active">Réalisations</a>
+        <a href="index.html#blog">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle">🌙</button>
+    </div>
   </header>
 
-  <!-- Section principale -->
-  <main>
-    <section class="intro">
-      <h2>Mes Réalisations</h2>
-      <p>Voici quelques projets que j’ai conçus et développés. Chaque projet reflète ma passion pour un web moderne, esthétique et performant.</p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Découvrez nos projets récents</h1>
+      <p>Nous accompagnons des entreprises de divers secteurs dans leur digitalisation.</p>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-image.png" alt="Illustration digitale">
+    </div>
+  </section>
 
-    <section class="realisations-grid">
-      <article class="card">
-        <img src="https://picsum.photos/400/250?random=1" alt="Projet 1">
-        <div class="card-content">
-          <h3>Site e-commerce</h3>
-          <p>Boutique en ligne moderne avec intégration du paiement mobile money et interface responsive.</p>
-          <a href="#" class="btn">Voir le projet</a>
+  <!-- Réalisations -->
+  <section id="projects" class="projects">
+    <h2>Nos Réalisations</h2>
+    <div class="projects-grid">
+
+      <!-- Projet 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="images/real1.png" alt="Site quincaillerie">
         </div>
-      </article>
-
-      <article class="card">
-        <img src="https://picsum.photos/400/250?random=2" alt="Projet 2">
-        <div class="card-content">
-          <h3>Application mobile</h3>
-          <p>Une app Android intuitive pour la gestion des ventes et inventaires, optimisée pour les petites entreprises.</p>
-          <a href="#" class="btn">Voir le projet</a>
+        <div class="project-content">
+          <h3>Site Quincaillerie</h3>
+          <p>Un site complet pour un magasin de vente de matériaux à Bouaké.</p>
+          <a href="https://225-bakuss.github.io/Maquette-quincaillerie-/" target="_blank" class="cta-button">Voir le site</a>
         </div>
-      </article>
+      </div>
 
-      <article class="card">
-        <img src="https://picsum.photos/400/250?random=3" alt="Projet 3">
-        <div class="card-content">
-          <h3>Portfolio personnel</h3>
-          <p>Un site élégant présentant mes compétences et mes services, avec mode sombre intégré.</p>
-          <a href="#" class="btn">Voir le projet</a>
+      <!-- Projet 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="images/real2.png" alt="Site MotoGlow">
         </div>
-      </article>
-
-      <article class="card">
-        <img src="https://picsum.photos/400/250?random=4" alt="Projet 4">
-        <div class="card-content">
-          <h3>Plateforme éducative</h3>
-          <p>Un espace interactif pour les cours en ligne avec vidéos, quiz et tableau de bord utilisateur.</p>
-          <a href="#" class="btn">Voir le projet</a>
+        <div class="project-content">
+          <h3>MotoGlow</h3>
+          <p>Site e-commerce avec catalogue LED pour motards.</p>
+          <a href="https://bit.ly/MotoGlow" target="_blank" class="cta-button">Voir le site</a>
         </div>
-      </article>
-    </section>
-  </main>
+      </div>
 
-  <!-- Pied de page -->
+      <!-- Tu peux ajouter d’autres projets en copiant la structure ci-dessus -->
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Demandez votre site maintenant</h2>
+    <form action="https://formsubmit.co/bakussweb@gmail.com" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre e-mail" required>
+      <input type="text" name="telephone" placeholder="Votre numéro WhatsApp" required>
+      <textarea name="message" placeholder="Quel type de site ou besoin avez-vous ?" required></textarea>
+      <button type="submit" class="cta-button">Envoyer</button>
+    </form>
+    <p>Ou contactez-nous directement sur <a href="https://wa.me/2250556109225" target="_blank">WhatsApp</a></p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Bakuss Web Services. Tous droits réservés.</p>
+    <p>&copy; 2025 Bakuss Web Services | Koko, Bouaké</p>
   </footer>
 
+  <!-- Script mode nuit/jour -->
   <script>
-    const toggleBtn = document.getElementById('toggle-theme');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    const toggleBtn = document.getElementById("theme-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
     });
   </script>
+
 </body>
 </html>
