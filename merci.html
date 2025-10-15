@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message envoyé - Bakuss Web Services</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+  <style>
+    .success-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      min-height: 70vh;
+    }
+
+    .checkmark {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 40px rgba(0,229,255,0.3);
+      animation: pop 0.8s ease-out forwards, glow 3s ease-in-out infinite alternate;
+    }
+
+    .checkmark svg {
+      width: 50px;
+      height: 50px;
+      stroke: var(--bg-dark-1);
+      stroke-width: 5;
+      fill: none;
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: draw 0.8s 0.4s ease forwards;
+    }
+
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.4); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 20px rgba(0,229,255,0.2); }
+      to { box-shadow: 0 0 40px rgba(94,234,212,0.5); }
+    }
+
+    .success-container h1 {
+      margin-top: 28px;
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    .success-container p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 10px auto 40px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Logo Bakuss Web" class="logo">
+      </div>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="success-container">
+      <div class="checkmark">
+        <svg viewBox="0 0 52 52">
+          <path d="M14 27 l8 8 l16 -16" />
+        </svg>
+      </div>
+      <h1>Message bien envoyé ✅</h1>
+      <p>Merci pour ton message 💬<br>Je te répondrai très bientôt.</p>
+      <a href="index.html" class="btn cta">⬅ Retour à l'accueil</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Bakuss Web Services — Tous droits réservés</p>
+  </footer>
+
+  <script>
+  // Gestion du thème jour/nuit
+  const themeToggle = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+
+  if (localStorage.getItem("theme")) {
+    root.setAttribute("data-theme", localStorage.getItem("theme"));
+  }
+
+  themeToggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+  </script>
+</body>
+</html>
